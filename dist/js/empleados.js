@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         empleados.push(empleado);
         localStorage.setItem('empleados', JSON.stringify(empleados));         
-        //tablaE.innerHTML = '';  
+        //tablaE.innerHTML = '';  hay un error al cargar con este codigo
         document.querySelector("tbody").innerHTML = '';    
         $("#modalAgregarE").modal("hide");
         render(empleados)
