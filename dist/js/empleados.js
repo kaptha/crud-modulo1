@@ -47,8 +47,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
 
         empleados.push(empleado);
-        localStorage.setItem('empleados', JSON.stringify(empleados));
-        //console.log("empleado", empleado);  
+        localStorage.setItem('empleados', JSON.stringify(empleados));         
         //tablaE.innerHTML = '';  
         document.querySelector("tbody").innerHTML = '';    
         $("#modalAgregarE").modal("hide");
@@ -101,8 +100,7 @@ function render(empleados) {
 
         }
 
-        row.querySelector("#eliminar").onclick = ()=>{
-            //console.log("elimina");
+        row.querySelector("#eliminar").onclick = ()=>{           
             eliminaEmpleado(i, empleados)
         }  
 
