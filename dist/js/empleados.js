@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
     agregar.addEventListener('click', (e) =>{
-        e.preventDefault();
+        //e.preventDefault();
         const empleados = JSON.parse( localStorage.getItem("empleados") ) || [];
 
         const nombre = nombreInp.value;
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         empleados.push(empleado);
         localStorage.setItem('empleados', JSON.stringify(empleados));         
-        //tablaE.innerHTML = '';  hay un error al cargar con este codigo
-        document.querySelector("tbody").innerHTML = '';    
+        //tablaE.innerHTML = '';  
+        //document.querySelector("tbody").innerHTML = '';    
         $("#modalAgregarE").modal("hide");
         render(empleados)
     })       
@@ -93,7 +93,7 @@ function render(empleados) {
                 }
                 empleados.splice(i, 1, empleado);
                 localStorage.setItem('empleados', JSON.stringify(empleados));
-                tablaE.innerHTML = '';
+                //tablaE.innerHTML = '';
                 $("#modalEditar").modal("hide");
                 render(empleados);                
             }
